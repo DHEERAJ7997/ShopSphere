@@ -51,7 +51,7 @@ def init_data():
         },
     ]
     
-    # Retry up to 30 times with 1 second delay (30 seconds total)
+    # Retry up to 30 times with 1 second delay
     max_retries = 30
     for attempt in range(max_retries):
         try:
