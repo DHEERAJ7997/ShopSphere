@@ -4,7 +4,7 @@ import datetime
 
 app = Flask(__name__)
 
-# This key is what the API Gateway will use later to verify the token is real.
+# This key is what the API Gateway will use later to verify the token is real.// first initial step
 SECRET_KEY = "super_secret_shop_key"
 
 
