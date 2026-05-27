@@ -8,6 +8,7 @@ app = FastAPI()
 es = Elasticsearch("http://elasticsearch:9200")
 INDEX_NAME = "products"
 
+
 def init_data():
     """Initialize the Elasticsearch index with sample data"""
     import time
