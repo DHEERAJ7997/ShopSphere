@@ -35,7 +35,7 @@ catalog_data = [
     },
     {
         "id": 5,
-        "name": "Bluetooth Speaker",
+        "name": "Bluetooth Speaker new",
         "description": "Waterproof portable bluetooth speaker",
         "price": 59.99,
         "category": "Electronics",
