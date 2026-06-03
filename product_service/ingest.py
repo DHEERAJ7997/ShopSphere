@@ -21,14 +21,14 @@ catalog_data = [
     },
     {
         "id": 3,
-        "name": "Running Shoes",
+        "name": "Running Shoes sports",
         "description": "Lightweight marathon running shoes",
         "price": 120.00,
         "category": "Apparel",
     },
     {
         "id": 4,
-        "name": "Coffee Maker",
+        "name": "Coffee Maker", 
         "description": "Programmable drip coffee maker",
         "price": 89.99,
         "category": "Home",
