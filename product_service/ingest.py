@@ -28,7 +28,7 @@ catalog_data = [
     },
     {
         "id": 4,
-        "name": "Coffee Maker machine", 
+        "name": "Coffee Maker machi", 
         "description": "Programmable drip coffee maker",
         "price": 89.99,
         "category": "Home",
