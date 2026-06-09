@@ -21,7 +21,7 @@ catalog_data = [
     },
     {
         "id": 3,
-        "name": "Running Shoes ss",
+        "name": "Running Shoes",
         "description": "Lightweight marathon running shoes",
         "price": 120.00,
         "category": "Apparel",
