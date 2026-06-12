@@ -5,4 +5,4 @@ services:
     ports:
       - "5500:5500"
 
-# Usage: `docker-compose -f docker-frontend.yml up --build`
+# Usage: `docker-compose -f docker-frontend.yml up --build
