@@ -3,6 +3,6 @@ services:
   frontend:
     build: ./shopsphere-vanilla
     ports:
-      - "3000:3000"
+      - "5500:5500"
 
 # Usage: `docker-compose -f docker-frontend.yml up --build`
