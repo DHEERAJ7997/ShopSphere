@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+# Copy the service you want to run here. Example runs `api_gateway` only.
+  api_gateway:
+    build: ./api_gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+
+# To run a different service, replace `api_gateway` with `auth_service`,
+# `order_service`, `product_service` or `frontend` and adjust the build path.
+# Start with: `docker-compose -f docker-single.yml up --build`

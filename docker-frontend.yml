@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  frontend:
+    build: ./shopsphere-vanilla
+    ports:
+      - "3000:3000"
+
+# Usage: `docker-compose -f docker-frontend.yml up --build`
