@@ -1,20 +1,31 @@
-# ShopSphere frontend (shopsphere-vanilla)
+# ShopSphere frontend
 
-Simple static demo frontend. Files:
+Marketplace-style UI connected to the API gateway.
 
-- `index.html` — main page
-- `styles.css` — basic styles
-- `script.js` — small client that fetches `/products` from API
+## Run with full stack (Docker)
 
-Run locally (recommended) from `shopsphere-vanilla` folder:
+From the project root:
 
 ```powershell
+docker compose -f Docker-compose.yml up --build
+```
+
+Open http://127.0.0.1:5500
+
+## Run frontend only
+
+```powershell
+cd shopsphere-vanilla
 python -m http.server 5500
 ```
 
-Then open: http://127.0.0.1:5500
+The API gateway must be running on http://127.0.0.1:8000.
 
-Notes:
-- The JS uses `http://127.0.0.1:8000` as `API_BASE`. Update `script.js` if your gateway runs on another port.
-- Ensure your backend (API gateway / services) are running and allow CORS for the frontend origin.
-- To run full stack with Docker: `docker-compose up --build` from repository root (if you prefer containers).
+## Features
+
+- Product catalog from `/api/products`
+- Search via `/api/search`
+- Cart sync via `/api/cart`
+- Checkout via `/api/checkout`
+
+Update `API_BASE` in `script.js` if your gateway uses a different host or port.

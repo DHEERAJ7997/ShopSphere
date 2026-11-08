@@ -1,33 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ShopSphere - Demo Frontend</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopSphere — Marketplace</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>ShopSphere Demo</h1>
-    <p class="muted">Frontend static demo. Update API endpoint in <code>script.js</code> if needed.</p>
-  </header>
 
-  <main>
-    <section class="controls">
-      <input id="search" placeholder="Search products" />
-      <button id="refresh">Refresh</button>
-      <span id="status"></span>
-    </section>
+<nav>
+  <div class="logo">Shop<span>Sphere</span></div>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search products, brands, categories..." />
+    <button type="button" id="searchBtn">Search</button>
+  </div>
+  <div class="nav-right">
+    <span class="status-pill" id="statusPill">Loading...</span>
+    <button class="cart-btn" type="button" id="openCartBtn">
+      🛒 Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
 
-    <section id="products">
-      <ul id="product-list"></ul>
-    </section>
-  </main>
+<div class="hero">
+  <h1>Millions of Products. One Marketplace.</h1>
+  <p>Fast search · Smart recommendations · Secure checkout</p>
+  <div class="hero-tags">
+    <span class="hero-tag" data-tag="headphone">🎧 Audio</span>
+    <span class="hero-tag" data-tag="keyboard">⌨️ Keyboards</span>
+    <span class="hero-tag" data-tag="shoe">👟 Shoes</span>
+    <span class="hero-tag" data-tag="coffee">☕ Home</span>
+    <span class="hero-tag" data-tag="speaker">🔊 Speakers</span>
+    <span class="hero-tag" data-tag="">🔥 All Products</span>
+  </div>
+</div>
 
-  <footer>
-    <small>Run a local static server: <code>python -m http.server 5500</code></small>
-  </footer>
+<div class="main">
+  <aside class="sidebar">
+    <div class="filter-card">
+      <h3>Category</h3>
+      <label class="filter-item"><input type="radio" name="category" value="" checked> All</label>
+      <label class="filter-item"><input type="radio" name="category" value="Electronics"> Electronics</label>
+      <label class="filter-item"><input type="radio" name="category" value="Apparel"> Apparel</label>
+      <label class="filter-item"><input type="radio" name="category" value="Home"> Home</label>
+    </div>
+    <div class="filter-card">
+      <h3>Price Range</h3>
+      <div class="price-range">
+        <input type="range" min="0" max="500" value="500" id="priceRange">
+        <div class="price-labels"><span>$0</span><span id="priceLabel">$500+</span></div>
+      </div>
+    </div>
+  </aside>
 
-  <script src="script.js"></script>
+  <section class="products-area">
+    <div class="results-header">
+      <div>
+        <h2 id="resultsTitle">All Products</h2>
+        <span id="resultsCount">0 products found</span>
+      </div>
+      <select class="sort-select" id="sortSelect">
+        <option value="default">Sort: Featured</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="name">Name: A → Z</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>Your Cart 🛒</h2>
+    <button class="close-btn" type="button" id="closeCartBtn">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button class="checkout-btn" type="button" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
